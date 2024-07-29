@@ -30,8 +30,8 @@ def youtubePage(request):
 def cloudPage(request):
     return render(request,'cloudcomputing.html')
 
-def course1(request):
-    return render(request,'course1.html')
+def courses(request):
+    return render(request,'courses.html')
 
 def course2(request):
     return render(request,'course2.html')

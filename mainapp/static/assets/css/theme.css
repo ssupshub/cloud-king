@@ -57,7 +57,8 @@ html {
   color: white !important;
 }
 
-/* styles.css */
+/* styles.css  courses*/
+
 
 /* styles.css */
 
@@ -108,22 +109,11 @@ body {
   animation: pulse 1s infinite;
 }
 
-
-
-.navbar-toggler {
-  border-color: rgba(248, 248, 242, 0.925); /* Light border */
+.img-slider{
+  /* height: 500px!important;
+  width: 100vh; */
 }
 
-.navbar-toggler-icon {
-  background-image: none;
-  color: #fff; /* Light color */
-}
-
-.navbar-toggler-icon::before {
-  content: '\2630'; /* Unicode for hamburger icon */
-  font-size: 1.25rem; /* Adjust size as needed */
-  color: #fff; /* Light color */
-}
 
 
 
@@ -14004,7 +13994,7 @@ label {
 .nav-link-text {
  
   color: white;
-  font-size: medium;
+  font-size: .95rem;
   padding-left: 3px;
   padding-right: 1px;
 }

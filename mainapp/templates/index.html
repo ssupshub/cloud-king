@@ -17,11 +17,11 @@
   <!-- ===============================================-->
   <!--    Favicons-->
   <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicons/apple-touch-icon.png' %}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicons/favicon-32x32.png' %}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicons/favicon-16x16.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicons/apple-touch-icon.png' %}' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicons/favicon-32x32.png' %}' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicons/favicon-16x16.png' %}' %}">
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicons/favicon.ico' %}">
-  <meta name="msapplication-TileImage" content="{% static 'assets/img/favicons/mstile-150x150.png' %}">
+  <meta name="msapplication-TileImage" content="{% static 'assets/img/favicons/mstile-150x150.png' %}' %}">
   <meta name="theme-color" content="#ffffff">
 
   <!-- ===============================================-->
@@ -33,6 +33,7 @@
   <link href="{% static 'assets/lib/semantic-ui-accordion/accordion.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/lib/semantic-ui-transition/transition.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/css/theme.css' %}" rel="stylesheet">
+
 </head>
 
   
@@ -67,34 +68,99 @@
           <div class="collapse navbar-collapse ml-2 ml-md-0" id="navbarContent">
             <ul class="navbar-nav text-uppercase font-weight-semi-bold ml-auto" id="navbar-spy">
               <li class="nav-item"><a class="nav-link" href="{% url 'homePage' %}"><span class="nav-link-text">Home</span></a></li>
-              <li class="nav-item dropdown dropdown-menu-on-hover">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="nav-link-text">Course</span>
-                </a>
-                <div class="dropdown-menu bg-color" aria-labelledby="navbarDropdown1">
-                  
-                  <a class="dropdown-item text-light" href="{% url 'cloudcomputing' %}">Cloud Computing</a>
-                  <a class="dropdown-item text-light" href="{% url 'course1' %}">course1</a>
-                  <a class="dropdown-item text-light" href="{% url 'course2' %}">course2</a>
-                  <a class="dropdown-item text-light" href="{% url 'course3' %}">course3</a>
-                  <a class="dropdown-item text-light" href="{% url 'course4' %}">course4</a>
-                  <a class="dropdown-item text-light" href="{% url 'course5' %}">course5</a>
-                  <a class="dropdown-item text-light" href="{% url 'course6' %}">course6</a>
-                  <a class="dropdown-item text-light" href="{% url 'course7' %}">course7</a>
-                </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#Schedule" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Certificate</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}"><span class="nav-link-text">Courses</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Schedule" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Schedule</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Life@CloudKing</span></a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'pastevents' %}"><span class="nav-link-text">Placement</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Industrial</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Contact</span></a></li>
             </ul>
-            <button class="text-base ml-lg-4 mt-3 mt-lg-0 btn btn-outline-light mb-4 mb-lg-0" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Registration</button>
-            <a class="text-sm ml-lg-4 mt-3 mt-lg-0 btn btn-outline-light mb-4 mb-lg-0 d-inline-flex align-items-center" href="tel:919910809117">
-              <i class="fas fa-phone pr-1" style="font-size: 1rem;"></i>
-              <span style="font-size: 0.875rem;">9910809117</span>
-            </a>
+            <div class="d-flex align-items-center ml-lg-4 mt-3 mt-lg-0 mb-4 mb-lg-0">
+              <button class="btn btn-outline-light" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Registeration</button>
+              <a class="btn btn-outline-light d-inline-flex align-items-center ml-2" href="tel:919910809117">
+                <i class="fas fa-phone pr-1" style="font-size: 1rem;"></i>
+                <span style="font-size: 0.875rem;">9910809117</span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
+      
+      <style>
+        /* Custom styles for nested dropdowns */
+        .dropdown-submenu {
+          position: relative;
+        }
+      
+        .dropdown-submenu .dropdown-menu {
+          top: 0;
+          left: 100%;
+          margin-top: -1px;
+          display: none;
+        }
+      
+        /* Show the submenu on hover */
+        .dropdown-submenu:hover .dropdown-menu {
+          display: block;
+        }
+      
+        .dropdown-menu:hover {
+          display: block;
+        }
+      
+        /* Media queries for responsive design */
+        @media (max-width: 767px) {
+          .navbar-nav {
+            text-align: center;
+          }
+          .navbar-nav .nav-item {
+            margin-bottom: 10px;
+          }
+          .navbar-toggler {
+            margin-right: 0;
+          }
+          .navbar-collapse {
+            justify-content: center;
+          }
+          .btn {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          .d-flex {
+            flex-direction: column;
+            width: 100%;
+          }
+        }
+      </style>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Handle hover on Cloud Computing link
+          document.getElementById('cloudComputingLink').addEventListener('mouseover', function () {
+            showSubMenu(this);
+          });
+      
+          // Handle hover on Networking link
+          document.getElementById('networkingLink').addEventListener('mouseover', function () {
+            showSubMenu(this);
+          });
+      
+          function showSubMenu(link) {
+            // Hide all other submenus
+            var allSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu');
+            allSubmenus.forEach(function (menu) {
+              if (menu !== link.nextElementSibling) {
+                menu.style.display = 'none';
+              }
+            });
+      
+            // Show the hovered submenu
+            var submenu = link.nextElementSibling;
+            submenu.style.display = 'block';
+          }
+        });
+      </script>
+      
+      
       <a href="https://wa.me/919910809117" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp fa-3x"></i>
       </a>
@@ -109,13 +175,13 @@
             </ol>
             <div class="carousel-inner img-slider">
               <div class="carousel-item active">
-                <img src="{% static 'assets/images/b1.png' %}" class="d-block w-100 " style="height:100vh; " alt="...">
+                <img src="{% static 'assets/images/banner1/1.png' %}" class="d-block w-100 " style="margin-top: -20px;"  alt="...">
               </div>
               <div class="carousel-item">
-                <img src="{% static 'assets/images/b2.png' %}" class="d-block w-100" style="height:100vh;"  alt="...">
+                <img src="{% static 'assets/images/banner1/2.png' %}" class="d-block w-100"  alt="...">
               </div>
               <div class="carousel-item">
-                <img src="{% static 'assets/images/b3.png' %}" class="d-block w-100" style="height:100vh;" alt="...">
+                <img src="{% static 'assets/images/banner1/3.png' %}" class="d-block w-100" style="margin-top: 40px;" alt="...">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -149,8 +215,8 @@
             <div class="col-md-6 d-flex flex-column justify-content-between pr-md-5">
               <div>
                 <h4 class="mb-4">Work Flow</h4>
-                <p>You've inspired new consumer, racked up click-thru's, blown-up brand enes. We can't give you back the weekends you worked, or erase the pain ebeing to make the logo bigger. But if you submit your best work we ajusts might be able to give the chance to show you best digital marketing CES is the world's gathering place for all those who We can't give you back the weekends you worked, or erase the pain ebeing to make the logo bigger. But if you submit your best work we ajusts might be able to give the chance to show you best digital marketing CES is the world's gathering place for all those who</p><a class="font-weight-bold" href="#">Read more<span class="fas fa-chevron-right" data-fa-transform="shrink-6 down-2 right-2"></span></a>
-              </div><img class="rounded  img-fluid" src="{% static 'assets/images/b4.png' %}" style="height: 90vh; width:100%;" alt="" data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}' data-zanim-trigger="scroll" />
+                <p>You've inspired new consumer, racked up click-thru's, blown-up brand enes. We can't give you back the weekends you worked, or erase the pain ebeing to make the logo bigger. But if you submit your best work we ajusts might be able to give the chance to show you best digital marketing CES is the world's gathering place for all those who </p><a class="font-weight-bold" href="#">Read more<span class="fas fa-chevron-right" data-fa-transform="shrink-6 down-2 right-2"></span></a>
+              </div><img class="rounded mt-4 img-fluid" src="{% static 'assets/images/b5.jpg' %}" alt="" style="height: 90vh;" data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}' data-zanim-trigger="scroll" />
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-between mt-5 mt-md-0 pl-md-5">
               <div>
@@ -173,7 +239,7 @@
         <div class="container-fluid">
           <h3 class="text-white mb-6">Organizers</h3>
           <div class="row pb-3 pb-lg-5">
-            <div class="col-lg-3"><img class="img-fluid d-none d-lg-block h-100 rounded-soft fit-cover" src="{% static 'assets/img/team/rev-slider-03.png' %}" h alt="" /></div>
+            <div class="col-lg-3"><img class="img-fluid d-none d-lg-block h-100 rounded-soft fit-cover" src="{% static 'assets/img/team/rev-slider-03.png' %}" alt="" /></div>
             <div class="col-lg-9 pl-lg-6">
               <div class="row">
                 <div class="col-sm-10 col-md-6 mb-5">
@@ -698,63 +764,70 @@
 
 
       <!-- <section> begin ============================-->
-      <section class="bg-200">
+        <section class="bg-200">
 
-        <div class="container-fluid">
-          <h3 class="mb-6">Event Partners</h3>
-          <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/ubuntu.png' %}" alt="" width="100" data-zanim-xs='{"animation":"slide-right","delay":0.1}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/durex.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.2}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/cnn.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.3}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/hbo.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.4}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/intel.png' %}" alt="" width="110" data-zanim-xs='{"animation":"slide-right","delay":0.5}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/kfc.png' %}" alt="" width="110" data-zanim-xs='{"animation":"slide-right","delay":0.6}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/nvidia.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.7}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/ibm-logo-png-transparent-background.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/samsung.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/event-partners-1.png' %}" alt="" width="140" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/amd_logo_1.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/suzuki-logo.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/linux.png' %}" alt="" width="90" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/1280px-PayPal_logo.svg.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/alibaba.png' %}" alt="" width="140" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-6">
-              <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/jbllogo.jpg' %}" alt="" width="100" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+          <div class="container-fluid">
+            <h3 class="mb-6">Event Partners</h3>
+            <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/hp.png' %}" alt="" width="100" data-zanim-xs='{"animation":"slide-right","delay":0.1}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/wipro.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.2}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/hcl.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.3}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/Accenture.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.4}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/intel.png' %}" alt="" width="110" data-zanim-xs='{"animation":"slide-right","delay":0.5}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/ibm.png' %}" alt="" width="110" data-zanim-xs='{"animation":"slide-right","delay":0.6}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/nvidia.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.7}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/ut.png' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/tcs.jpg' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/bita.jpg' %}" alt="" width="140" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/amd_logo_1.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/cnd.jpg' %}" alt="" width="120" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/apple.png' %}" alt="" width="90" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/1280px-PayPal_logo.svg.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/cnn.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/facebook.png' %}" alt="" width="130" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/tm.jpg' %}" alt="" width="140" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-3 col-6">
+                <div class="d-flex justify-content-center align-items-center border border-2x rounded-soft mb-4" style="height:150px;"><img src="{% static 'assets/img/logos/walmart.png' %}" alt="" width="100" data-zanim-xs='{"animation":"slide-right","delay":0.8}' /></div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+  
+  
 
       <!-- <section> begin ============================-->
       <section>
@@ -941,7 +1014,7 @@
       {% endblock %}
       
       <!-- <section> begin ============================-->
-        <section id="contact ">
+        <section id="contact">
           <div class="container-fluid">
             <h3 class="mb-lg-4 mb-3">Location & Contact</h3>
             <div class="row">
@@ -953,20 +1026,16 @@
                   <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
                   <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
                   <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
+                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
                   <input class="form-control mb-3" type="email" name="from" required placeholder="Email Address" />
                   <textarea class="form-control mb-3" name="message" rows="5" placeholder="Type your message"></textarea>
                   <button class="btn btn-primary btn-block mt-3" type="submit" name="submit" value="Send!">Submit</button>
                   <div class="zform-feedback"></div>
                 </form>
               </div>
-              <div class="col-lg-8 mt-lg-0 mb-3">
-                <div class="row ">
-                  <div class="col">
-                    <div style="width: 100%"><iframe width="100%" style="height:71vh" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=c%2020%20sector%202%20noida%20near%20nirulas%20hotel%2020301+(CloudKing%20Technical)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>
-                  </div>
-                </div>
+              <div class="col">
                 
-                </div>
+                 <div style="overflow:hidden;resize:none;max-width:100%;widt:100%;height:500px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=c+20+3rd+floor+sector+2+noida++201301&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-ded-maphtml" href="https://www.bootstrapskins.com/themes" id="make-map-infor-mation">premium bootstrap themes</a><style>#embed-map-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
               </div>
             </div>
             
@@ -1158,7 +1227,7 @@
     <script src="{% static 'assets/lib/semantic-ui-transition/transition.min.js' %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw&callback=initMap" async></script>
     <script src="{% static 'assets/js/theme.js' %}"></script>
-
+    
   </body>
 
 </html>

@@ -1,0 +1,146 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+<title>cloud computing</title>
+{% endblock %}
+
+{% block body %}
+<style>
+  body {
+    overflow-x: hidden;
+  }
+
+  #wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(190, 15, 15);
+    color: white;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    margin-left: 15rem;
+  }
+
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+      width: 25%;
+    }
+
+    #page-content-wrapper {
+      margin-left: 15rem;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    #page-content-wrapper {
+      width: 100%;
+    }
+  }
+
+  .nested-links {
+    display: none;
+  }
+
+  .list-group-item:hover .nested-links {
+    display: block;
+  }
+
+  .list-group-item {
+    font-size: large;
+    background-color: rgb(190, 15, 15);
+    color: white;
+    border: none;
+  }
+
+  .list-group-item-action:hover {
+    background-color: rgb(150, 5, 5);
+    color: white;
+  }
+  
+</style>
+
+<div class=" d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="container p-0" id="sidebar-wrapper">
+    <div class="bg-light border-right mt-2 sidebar-color">
+      <div class="sidebar-heading fs-3 list-group-item">Courses</div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item list-group-item-action">
+          Career Course
+          <div class="nested-links">
+            <a href="#" class="list-group-item list-group-item-action pl-4">CK-DCCP</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">CK-DCC & CSP</a>
+          </div>
+        </div>
+        <div class="list-group-item list-group-item-action">
+          Cloud Computing
+          <div class="nested-links">
+            <a href="#" class="list-group-item list-group-item-action pl-4">AWS</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">Azure</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">GCP</a>
+          </div>
+        </div>
+        <div class="list-group-item list-group-item-action">
+          Networking
+          <div class="nested-links">
+            <a href="#" class="list-group-item list-group-item-action pl-4">CCNA</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">CCNP</a>
+          </div>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action">MCSA</a>
+        <a href="#" class="list-group-item list-group-item-action">MCSE</a>
+        <a href="#" class="list-group-item list-group-item-action">RHCSA</a>
+        <a href="#" class="list-group-item list-group-item-action">Cyber Security</a>
+        <a href="#" class="list-group-item list-group-item-action">Devops</a>
+        <a href="#" class="list-group-item list-group-item-action">mLOps</a>
+        <div class="list-group-item list-group-item-action">
+          Python Developer
+          <div class="nested-links">
+            <a href="#" class="list-group-item list-group-item-action pl-4">Data Analytics</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">Data Science</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">Python Full Stack</a>
+          </div>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action">Java Full Stack</a>
+      </div>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="mt-auto p-1">
+      <img src="{% static 'assets/images/b1.jpg' %}" style="height: 80vh; width: 100%; margin-top: -20px;" alt="Sidebar Image">
+    </div> 
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+{% endblock %}
