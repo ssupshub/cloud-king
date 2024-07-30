@@ -5,80 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<style>
-  body {
-    overflow-x: hidden;
-  }
-
-  #wrapper {
-    display: flex;
-    align-items: stretch;
-  }
-
-  #sidebar-wrapper {
-    min-height: 100vh;
-    margin-left: -15rem;
-    transition: all 0.25s ease-in-out;
-    background-color: rgb(190, 15, 15);
-    color: white;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    width: 100%;
-    transition: all 0.25s ease-in-out;
-  }
-
-  #wrapper.toggled #page-content-wrapper {
-    margin-left: 15rem;
-  }
-
-  @media (min-width: 768px) {
-    #sidebar-wrapper {
-      margin-left: 0;
-      width: 25%;
-    }
-
-    #page-content-wrapper {
-      margin-left: 15rem;
-    }
-  }
-
-  @media (max-width: 767.98px) {
-    #sidebar-wrapper {
-      margin-left: 0;
-      width: 100%;
-    }
-
-    #page-content-wrapper {
-      width: 100%;
-    }
-  }
-
-  .nested-links {
-    display: none;
-  }
-
-  .list-group-item:hover .nested-links {
-    display: block;
-  }
-
-  .list-group-item {
-    font-size: large;
-    background-color: rgb(190, 15, 15);
-    color: white;
-    border: none;
-  }
-
-  .list-group-item-action:hover {
-    background-color: rgb(150, 5, 5);
-    color: white;
-  }
-  
-</style>
+<link href="{% static 'assets/css/course.css' %}" rel="stylesheet">
 
 <div class=" d-flex" id="wrapper">
   <!-- Sidebar -->
@@ -91,6 +18,7 @@
           <div class="nested-links">
             <a href="#" class="list-group-item list-group-item-action pl-4">CK-DCCP</a>
             <a href="#" class="list-group-item list-group-item-action pl-4">CK-DCC & CSP</a>
+            <a href="#" class="list-group-item list-group-item-action pl-4">CK-DCCP Level-2</a>
           </div>
         </div>
         <div class="list-group-item list-group-item-action">

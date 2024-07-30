@@ -69,10 +69,10 @@
             <ul class="navbar-nav text-uppercase font-weight-semi-bold ml-auto" id="navbar-spy">
               <li class="nav-item"><a class="nav-link" href="{% url 'homePage' %}"><span class="nav-link-text">Home</span></a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}"><span class="nav-link-text">Courses</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#Schedule" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Schedule</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Schedule" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Placement</span></a></li>
               <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Life@CloudKing</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'pastevents' %}"><span class="nav-link-text">Placement</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Contact</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'pastevents' %}"><span class="nav-link-text">Testimonial</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" data-fancyscroll="data-fancyscroll"><span class="nav-link-text">Contact_Us</span></a></li>
             </ul>
             <div class="d-flex align-items-center ml-lg-4 mt-3 mt-lg-0 mb-4 mb-lg-0">
               <button class="btn btn-outline-light" type="button" data-toggle="modal" data-target=".bd-example-modal-lg">Registeration</button>
@@ -159,8 +159,7 @@
           }
         });
       </script>
-      
-      
+
       <a href="https://wa.me/919910809117" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp fa-3x"></i>
       </a>
@@ -205,10 +204,13 @@
         </div>
         <button class="close mt-md-2" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-     
+     <div class="container-fluid">
+      <h3 class="text-center mt-3">Growth Path</h3>
+      <img class="rounded mt-4 img-fluid w-100 sec" style="height:80vh" src="{% static 'assets/images/b7.jpg' %}" alt=" " data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}' data-zanim-trigger="scroll" />
+     </div>
 
       <!-- <section> begin ============================-->
-      <section id="about">
+      <section class="sec" id="about">
 
         <div class="container-fluid">
           <div class="row">
@@ -216,7 +218,7 @@
               <div>
                 <h4 class="mb-4">Work Flow</h4>
                 <p>You've inspired new consumer, racked up click-thru's, blown-up brand enes. We can't give you back the weekends you worked, or erase the pain ebeing to make the logo bigger. But if you submit your best work we ajusts might be able to give the chance to show you best digital marketing CES is the world's gathering place for all those who </p><a class="font-weight-bold" href="#">Read more<span class="fas fa-chevron-right" data-fa-transform="shrink-6 down-2 right-2"></span></a>
-              </div><img class="rounded mt-4 img-fluid" src="{% static 'assets/images/b5.jpg' %}" alt="" style="height: 90vh;" data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}' data-zanim-trigger="scroll" />
+              </div><img class="rounded mt-4 img-fluid w-100" src="{% static 'assets/images/b5.jpg' %}" alt="" style="height: 90vh;" data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}' data-zanim-trigger="scroll" />
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-between mt-5 mt-md-0 pl-md-5">
               <div>
@@ -230,7 +232,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section>
+      <section class="sec">
 
         <div class="bg-holder overlay bg-overlay-primary" style="background-image:url(assets/img/background/organizers-bg.png' %});">
         </div>
@@ -298,7 +300,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section id="Speakers">
+      <section class="sec" id="Speakers">
 
         <div class="container-fluid">
           <h3 class="mb-lg-6 mb-4">Our Speakers</h3>
@@ -392,7 +394,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section>
+      <section class="sec">
 
         <div class="bg-holder overlay overlay-1" style="background-image: url('{% static 'assets/img/background/submit-bg.jpg' %}');">
         </div>
@@ -410,7 +412,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section id="Schedule">
+      <section class="sec" id="Schedule">
 
         <div class="bg-holder overlay overlay-white" style="background-image:url(assets/img/background/bg-eventschedule.png' %});">
         </div>
@@ -633,7 +635,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section>
+      <section class="sec">
 
         <div class="bg-holder overlay overlay-1" style="background-image:url(assets/img/background/subscription-bg.jpg' %});">
         </div>
@@ -662,7 +664,7 @@
 
 
       <!-- <section> begin ============================-->
-      <section>
+      <section class="sec">
 
         <div class="container-fluid">
           <h3 class="mb-6 ml-2">Past Events</h3>
@@ -764,7 +766,7 @@
 
 
       <!-- <section> begin ============================-->
-        <section class="bg-200">
+        <section  class="bg-200 sec">
 
           <div class="container-fluid">
             <h3 class="mb-6">Event Partners</h3>
@@ -830,7 +832,7 @@
   
 
       <!-- <section> begin ============================-->
-      <section>
+      <section class="sec">
 
         <div class="container-fluid">
           <h3 class="mb-6">Sponsors</h3>
@@ -877,13 +879,13 @@
 
 
       <!-- <section> begin ============================-->
-      <section id="price">
+      <section  id="price">
 
         <div class="bg-holder overlay bg-overlay-primary-dark" style="background-image:url(assets/img/background/bg-pricing.png' %});">
         </div>
         <!--/.bg-holder-->
 
-        <div class="container-fluid">
+        <div class="container-fluid sec">
           <h3 class="pb-6 text-white">Registration Pricing</h3>
           <div class="card-deck">
             <div class="card mb-3 bg-transparent border-white-20">
@@ -1011,100 +1013,86 @@
         </div>
       </section>
 
+    </main>
       {% endblock %}
+       
+       
       
+       
       <!-- <section> begin ============================-->
-        <section id="contact">
-          <div class="container-fluid">
-            <h3 class="mb-lg-4 mb-3">Location & Contact</h3>
-            <div class="row">
-              <div class="col-lg-4">
-                <form class="zform" method="post">
-                  <input type="hidden" name="to" value="username@domain.extension" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="text" name="name" required placeholder="Your Name" />
-                  <input class="form-control mb-3" type="email" name="from" required placeholder="Email Address" />
-                  <textarea class="form-control mb-3" name="message" rows="5" placeholder="Type your message"></textarea>
-                  <button class="btn btn-primary btn-block mt-3" type="submit" name="submit" value="Send!">Submit</button>
-                  <div class="zform-feedback"></div>
-                </form>
-              </div>
-              <div class="col">
-                
-                 <div style="overflow:hidden;resize:none;max-width:100%;widt:100%;height:500px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=c+20+3rd+floor+sector+2+noida++201301&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-ded-maphtml" href="https://www.bootstrapskins.com/themes" id="make-map-infor-mation">premium bootstrap themes</a><style>#embed-map-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
-              </div>
-            </div>
-            
-          </div>
-        </section>
+        <section class="sec" style="background-color: red; padding: 20px 0;;">
+          <div class="container">
+            <h3 class="text-dark mb-4 fade-in">Career With CloudKing Technology</h3>
 
-       
-       
-      </main>
-       
-      <!-- <section> begin ============================-->
-        <section style="background-color: red; padding: 20px 0;;">
-          <div class="container-fluid">
-            <h3 class="text-white mb-4">FAQ</h3>
             <div class="row">
-              <div class="col-lg-8 mt-4 mt-lg-0 d-flex flex-column justify-content-between">
+              <div class="col-lg-12 mt-4 mt-lg-0 d-flex flex-column justify-content-between">
                 <div class="row text-light">
                   <div class="col-md-auto col-6 border-400 pr-md-4">
                     <ul class="fa-ul mb-0">
-                      <li class="font-weight-bold mb-2">
+                      <li class="font-weight-bold mb-2 fs-2">
                         <span class="fa-li pr-2"><i class="fas fa-map"></i></span>CloudKing Technical
                       </li>
-                      <li>Near Nirulas Hotel<br />C 20 3rd floor Sector 2 Noida 201301,</li>
+                      <li class="fs-1">Near Nirulas Hotel<br />C 20 3rd floor Sector 2 Noida <br /> 201301</li>
                     </ul>
                   </div>
                   <div class="col-md-auto col-6 border-left border-md-right pr-md-4">
                     <ul class="fa-ul mb-0">
+                      <li class="font-weight-bold mb-2 fs-2">
+                        <span class="fa-li pr-2"><i class="fas fa-phone"></i></span>Contact
+                      </li>
                       <li class="mb-2">
-                        <span class="fa-li pr-2"><i class="fas fa-phone"></i></span>
-                        <a class="text-light" href="tel:919910809115">+919910809115</a><br />
-                        <a class="text-light" href="tel:919910809117">+919910809117</a>
+                        <span class="fa-li pr-2"><i class="fas fa-phone "></i></span>
+                        <a class="text-light fs-1" href="tel:919910809115">+919910809115</a><br />
+                        <a class="text-light fs-1" href="tel:919910809117">+919910809117</a>
                       </li>
                       <li>
-                        <span class="fa-li pr-2"><i class="fas fa-envelope"></i></span>
-                        <a class="text-light" href="mailto:example@mail.com">example@mail.com</a>
+                        <span class="fa-li pr-2"><i class="fas fa-envelope fa-2x"></i></span>
+                        <a class="text-light fs-1" style="padding-left: 12px;" href="mailto:info@cloudkingtechnical.com">info@cloudkingtechnical.com</a>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-auto pl-3 mt-4 mt-md-0 pb-md-2">
+                    
                     <ul class="fa-ul mb-0">
                       <li>
-                        <span class="fa-li pr-2"><i class="fab fa-linkedin-in"></i></span>
-                        <a class="text-light" href="https://www.linkedin.com/">Linkedin</a>
+                        <span class="fa-li pr-2"><i class="fab fa-linkedin-in fa-2x"></i></span>
+                        <a class="text-light fs-1" href="http://www.linkedin.com/in/cloudking-technical-54397131a"><span style="padding-left: 12px;">LinkedIn</span></a>
                       </li>
-                      <li class="my-1">
-                        <span class="fa-li pr-2"><i class="fab fa-google-plus-g"></i></span>
-                        <a class="text-light" href="https://plus.google.com/discover">Google+</a>
+                      <li class="">
+                        <span class="fa-li pr-2"><i class="fab fa-youtube fa-2x"></i></span>
+                        <a class="text-light fs-1" href="http://www.youtube.com/@CloudKingTechnicalOfficial"><span style="padding-left: 12px;">Utube</span></a>
+                      </li>
+
+                      <li>
+                        <span class="fa-li pr-2"><i class="fab fa-facebook fa-2x"></i></span>
+                        <a class="text-light fs-1" href="https://www.facebook.com/profile.php?id=61562555662900&mibextid=ZbWKwL"><span style="padding-left: 12px;">Facebook</span></a>
                       </li>
                       <li>
-                        <span class="fa-li pr-2"><i class="fab fa-twitter"></i></span>
-                        <a class="text-light" href="https://twitter.com/">Twitter</a>
-                      </li>
-                      <li>
-                        <span class="fa-li pr-2"><i class="fab fa-instagram"></i></span>
-                        <a class="text-light" href="https://www.instagram.com/cloudkingtechnical/?igsh=aWRnMjRsd3d5OXo3/">instagram</a>
+                        <span class="fa-li pr-2"><i class="fab fa-instagram fa-2x"></i></span>
+                        <a class="text-light fs-1" href="https://www.instagram.com/cloudkingtechnical/?igsh=aWRnMjRsd3d5OXo3/"><span style="padding-left: 12px;">Instagram</span></a>
                       </li>
                       <li class="mb-3">
-                        <span class="fa-li pr-2"><i class="fab fa-whatsapp"></i></span>
-                        <a class="text-light" href="https://wa.me/918745098824">WhatsApp</a> <!-- Replace 1234567890 with your WhatsApp number -->
+                        <span class="fa-li pr-2"><i class="fab fa-whatsapp fa-2x"></i></span>
+                        <a class="text-light fs-1" href="https://wa.me/918745098824"><span style="padding-left: 12px;">WhatsApp</span></a> <!-- Replace 1234567890 with your WhatsApp number -->
                     </li>
                     </ul>
                   </div>
-                </div>
-                {% comment %} <div class="googlemap rounded-soft mt-4 mt-lg-0" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="assets/img/icons/map-marker.png' %}" data-zoom="17" data-theme="Default" style="min-height: 245px;">
-                  <div class="marker-content text-light">
-                    <h5>Eiffel Tower</h5>
-                    <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br /> with steps and elevators to observation decks.</p>
+                  <div class="col-md-auto col-6 border-left border-md-right pr-md-4">
+                    <ul class="fa-ul mb-0">
+                      <li class="font-weight-bold mb-2 fs-2">
+                        <span class="fa-li pr-2"><i class="fas fa-star"></i></span>Our Brands
+                      </li>
+                      <li class="mb-2">
+                        
+                        <p class="text-light fs-1">SpokenMate</p>
+                        <p class="text-light fs-1">ADRBS</p>
+                        <p class="text-light fs-1">Lycosent</p>
+                      </li>
+
+                    </ul>
                   </div>
-                </div> {% endcomment %}
+                </div>
+                 
               </div>
               
             </div>
