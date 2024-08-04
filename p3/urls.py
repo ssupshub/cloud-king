@@ -24,5 +24,8 @@ urlpatterns = [
     path('contact/', views.contact_form_view, name='contact'),
     path('registration/', views.registration_view, name='registration_view'),
     path('success/', views.success_page, name='success'),
+    path('placement/', views.placementPage, name='placement'),
+    path('cloudking/', views.cloudkingPage, name='cloudking'),
+    path('testimonial/', views.testimonialPage, name='testimonial'),
    
 ]

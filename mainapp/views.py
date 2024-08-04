@@ -57,6 +57,16 @@ def course7(request):
 def pasteventsPage(request):
     return render(request,'pastevents.html')
 
+def testimonialPage(request):
+    return render(request,'testimonial.html')
+
+
+def cloudkingPage(request):
+    return render(request,'Life@cloudking.html')
+
+def placementPage(request):
+    return render(request,'placement.html')
+
 def registration_view(request):
     if request.method == 'POST':
         first_name = request.POST.get('first_name')
