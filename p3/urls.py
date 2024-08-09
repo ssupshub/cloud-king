@@ -27,5 +27,7 @@ urlpatterns = [
     path('placement/', views.placementPage, name='placement'),
     path('cloudking/', views.cloudkingPage, name='cloudking'),
     path('testimonial/', views.testimonialPage, name='testimonial'),
+    path('my-form/', views.my_form_view, name='my_form'),
+    path('modal-form/', views.ModalFormView, name='modal_form'),
    
 ]

@@ -1,6 +1,32 @@
 body {
     overflow-x: hidden !important;
 }
+#wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #sidebar-wrapper {
+    flex: 0 0 250px;
+  }
+
+  #page-content-wrapper {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    #wrapper {
+      flex-direction: column;
+    }
+
+    #sidebar-wrapper {
+      flex: 1 0 auto;
+    }
+
+    #page-content-wrapper {
+      order: 2;
+    }
+  }
 
 #wrapper {
     display: flex !important;
@@ -9,7 +35,7 @@ body {
 
 #sidebar-wrapper {
     min-height: 100vh !important;
-    margin-left: -15rem !important;
+    margin-left: -10rem !important;
     transition: all 0.25s ease-in-out !important;
     background-color: rgb(190, 15, 15) !important;
     color: white !important;
@@ -35,7 +61,7 @@ body {
     }
 
     #page-content-wrapper {
-        margin-left: 15rem !important;
+        margin-left: 3rem !important;
     }
 }
 

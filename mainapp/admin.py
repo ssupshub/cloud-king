@@ -10,3 +10,13 @@ class RegistrationAdmin(admin.ModelAdmin):
 @admin.register((ContactForm))
 class ContactFormAdmin(admin.ModelAdmin):
     list_display=("name","phone","email","address","message")
+    
+
+@admin.register((MyFormData))
+class MyFormDataAdmin(admin.ModelAdmin):
+    list_display=("name","phone","email","course")
+    
+    
+@admin.register((ModalForm))
+class ModalFormAdmin(admin.ModelAdmin):
+    list_display=("name","phone","email","course")

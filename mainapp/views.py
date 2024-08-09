@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from .models import *
 from django.conf import settings
+from django.contrib import messages
 # Create your views here.
 def homePage(request):
     return render(request,'index.html')
@@ -129,3 +130,47 @@ def contact_form_view(request):
 
 def success_page(request):
     return render(request, 'success.html')
+
+
+
+import logging
+logger = logging.getLogger(__name__)
+
+def my_form_view(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        course = request.POST.get('course')
+
+        logger.debug(f"Received: {name}, {phone}, {email}, {course}")
+
+        if name and phone and email and course:
+            MyFormData.objects.create(name=name, phone=phone, email=email, course=course)
+            messages.success(request, "Data saved successfully!")
+            return redirect('success')
+        else:
+            messages.error(request, "All fields are required.")
+
+    return render(request, 'index.html')
+
+
+logger = logging.getLogger(__name__)
+
+def ModalFormView(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        course = request.POST.get('course')
+        logger.debug(f"Received: {name}, {phone}, {email}, {course}")
+
+        if name and phone and email and course:
+            # Save data to the database
+            ModalForm.objects.create(name=name, phone=phone, email=email, course=course)
+            messages.success(request, "Data saved successfully!")
+            return redirect('success')  # Ensure you have a success URL or view
+        else:
+            messages.error(request, "All fields are required.")
+
+    return render(request, 'index.html')

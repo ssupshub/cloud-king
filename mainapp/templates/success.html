@@ -7,6 +7,89 @@
 
   
       {% block body %}
-      <h1>Registration Successful</h1>
-      <p>Thank you for registering. We have sent a confirmation email to your address.</p>
+      
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+    
+                <img class="rounded mt-4 img-fluid w-100 sec" style="height:80vh" src="{% static 'assets/img/background/b3.jpg' %}"
+                    alt=" " data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}'
+                    data-zanim-trigger="scroll" />
+            </div>
+            <div class="col-md-6 mt-3">
+                <h3 style="color: rgb(192, 19, 19);" class="text-center">Form Submitted Successfull</h3>
+                
+                <div class="mt-3">
+                  <div class="card" style="background-color: rgb(189, 8, 8);">
+                      <div class="card-body">
+                          <ul class="fa-ul text-white">
+                              <li >
+                                  <h5 class="text-light">Thank you for registering. <br> We have sent a confirmation email to your address <br>our community contact you as soon as. </h5>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="mt-3">
+                    <div class="card" style="background-color: rgb(189, 8, 8);">
+                        <div class="card-body">
+                            <ul class="fa-ul text-white">
+                                <li>
+                                    <span class="fa-li"><i class="fas fa-envelope fa-2x"></i></span>
+                                    <a class="text-white fs-1" style="padding-left: 12px;"
+                                        href="mailto:info@cloudkingtechnical.com">info@cloudkingtechnical.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-3">
+                    <div class="card" style="background-color: rgb(189, 8, 8);">
+                        <div class="card-body">
+                            <ul class="fa-ul text-white">
+                                <li>
+                                    <span class="fa-li pr-2"><i class="fas fa-phone fa-2x"></i></span>
+                                    <div>
+                                        <a class="text-light fs-1" href="tel:919910809115">+919910809115</a><br />
+                                        <a class="text-light fs-1" href="tel:919910809117">+919910809117</a>
+                                    </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="mt-3">
+                    <div class="card" style="background-color: rgb(189, 8, 8);">
+                        <div class="card-body">
+                            <ul class="fa-ul text-white">
+                                <li >
+                                    <h4 class="text-light">CloudKing Technical</h4>
+                                    <h5 class="text-light">Near Nirual's Hotel <br> C-20 3rd floor sector 2 Noida <br>201301 </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+      <div class="mt-2">
+        <div class="card" style="background-color: rgb(189, 8, 8);">
+            <div class="card-body ">  
+               <p class="text-light fs-1 text-center">Registration Successful.</p>
+            </div>
+        </div>
+    </div>
+     
+        <div class="card" style="background-color: rgb(189, 8, 8);">
+            <div class="card-body ">  
+               <p class="text-light fs-1 text-center">Thank you for registering. <br> We have sent a confirmation email to your address <br>our community contact you as soon as. </p>
+            </div>
+        
+    </div>
       {% endblock %}
