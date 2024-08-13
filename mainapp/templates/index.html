@@ -143,8 +143,8 @@
       {% endif %}
   </div>
 
-  <div class="container">
-    <form method="post" action="{% url 'my_form' %}" class="fixed-form">
+  <div class="container ">
+    <form method="post" action="{% url 'my_form' %}" class="fixed-form ">
       {% csrf_token %}
       <div class="form-row">
           <div class="form-group">
@@ -175,16 +175,16 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+<div class="modal fade " id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="formModalLabel">Fill the Form</h5>
+            <div class="modal-header contact-bg">
+                <h5 class="modal-title text-light" id="formModalLabel"> Please Fill the Form for Enquiry</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="post" action="{% url 'modal_form' %}">
+            <form method="post" action="{% url 'modal_form' %}" class="contact-bg">
                 <div class="modal-body">
                     {% csrf_token %}
                     <div class="form-group">
@@ -201,8 +201,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-outline-light d-inline-flex align-items-center ml-2 fs-1" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-light d-inline-flex align-items-center ml-2 fs-1">Submit</button>
                 </div>
             </form>
         </div>
@@ -217,7 +217,7 @@
     }
 
     // Call the function every 10 seconds
-    setInterval(showModalEvery10Seconds, 30000); // 10,000 milliseconds = 10 seconds
+    setInterval(showModalEvery10Seconds, 30000); // 30,000 milliseconds = 30 seconds
 </script>
 
     {% block body %}
@@ -231,13 +231,13 @@
         </ol>
         <div class="carousel-inner img-slider">
           <div class="carousel-item active">
-            <img src="{% static 'assets/images/banner1/1.jpg' %}" class="d-block img-fluid w-100 h-auto" alt="...">
+            <img src="{% static 'assets/images/1.png' %}" class="d-block img-fluid w-100 h-auto " alt="...">
           </div>
           <div class="carousel-item">
-            <img src="{% static 'assets/images/banner1/2.jpg' %}" class="d-block img-fluid w-100 h-auto" alt="...">
+            <img src="{% static 'assets/images/2.png' %}" class="d-block img-fluid w-100 h-auto" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="{% static 'assets/images/banner1/3.jpg' %}" class="d-block img-fluid w-100 h-auto" alt="...">
+            <img src="{% static 'assets/images/3.png' %}" class="d-block img-fluid w-100 h-auto" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -1224,12 +1224,12 @@
 
 
     <!-- <section> begin ============================-->
-      <section class="sec" id="contact">
-        <div class="container-fluid">
-          <h3 class="mb-lg-4 mb-3" style="color:red">Contact & Location </h3>
+      <section class="contact-bg m-3" id="contact">
+        <div class="container-fluid ">
+          <h3 class="mb-lg-4 mb-3 text-white">Contact & Location </h3>
           <div class="row">
-            <div class="col-lg-4">
-              <form class="zform" method="post">
+            <div class="col-lg-4 ">
+              <form class="zform" method="post" >
                 {% csrf_token %}
                 <input type="hidden" name="to" value="username@domain.extension" />
                 <div class="form-group">
@@ -1247,7 +1247,7 @@
                 <div class="form-group">
                     <textarea class="form-control mb-3" name="message" rows="5" placeholder="Type your message"></textarea>
                 </div>
-                <button class="btn btn-block mt-3" style="background-color:red; color:white;" type="submit" name="submit" value="Send!">Submit</button>
+                <button class="btn btn-outline-light  align-items-center fs-1 w-100 " style="background-color:red; color:white;" type="submit" name="submit" value="Send!">Submit</button>
                 <div class="zform-feedback"></div>
             </form>
             </div>
@@ -1347,35 +1347,35 @@
   <!-- ===============================================-->
 
 
-  <footer class="footer-bg-color">
+  <footer class="footer-bg-color pb-5" >
     <div class="container-fluid">
-      <div class="row fs--1 no-gutters py-4 text-center">
+      <div class="row fs--1 no-gutters py-4 text-center ">
         <div class="col-md-6 col-sm-auto text-md-left pl-0">
-          <p class="mb-0 text-400">Thank you for creating with Confernce <span class="d-none d-sm-inline-block">|
-            </span><br class="d-sm-none" /> 2019 &copy; <a class="text-info" href="#">Conference</a></p>
+          <p class="mb-0 text-400">Thank you for creating with SK Learn-Tech<span class="d-none d-sm-inline-block">|
+            </span><br class="d-sm-none" /> 2019 &copy; <a class="text-info" href="https://www.youtube.com/@sklearntech">SK Learn-Tech</a></p>
         </div>
         <div class="col-md-5 col-sm-auto text-right d-none d-sm-block ml-6 ml-md-0">
           <p class="mb-0 text-400">Made with <span class="fas fa-heart mx-1"></span> by <a class="text-info"
-              href="https://themewagon.com/themes/">Themewagon</a></p>
+              href="https://www.youtube.com/@sklearntech">SK Learn-Tech</a></p>
         </div>
       </div>
     </div>
   </footer>
-  <div class="modal fade bd-example-modal-lg overflow-auto" tabindex="-1" role="dialog"
+  <div class="modal fade bd-example-modal-lg overflow-auto " tabindex="-1" role="dialog"
     aria-labelledby="registration-modal" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header flex-column">
-          <button class="close pr-3 pt-2" type="button" data-dismiss="modal" aria-label="Close"><span
+      <div class="modal-content ">
+        <div class="modal-header flex-column contact-bg">
+          <button class="close pr-3 pt-2 text-light" type="button" data-dismiss="modal" aria-label="Close"><span
               aria-hidden="true">×</span></button>
-          <div class="w-75">
-            <h4 class="pl-3 text-900" id="registration-modal">Register For Course Enquiry Conference</h4>
-            <p class="pl-3 mb-0">Conference 2024 will be available in September. Please provide your information to be
-              notified when Conference briefing are made.</p>
+          <div class="w-75 ">
+            <h4 class="pl-3  text-light" id="registration-modal">Register For Course And  Enquiry in CloudKing Technical</h4>
+            <p class="pl-3 mb-0">CloudKing Technical courses will be available. Please provide your information to be
+              notified And Contact our team as soon as. </p>
           </div>
         </div>
-        <div class="modal-body">
-          <form class="zform" method="post" action="{% url 'registration_view' %}">
+        <div class="modal-body contact-bg">
+          <form class="zform " method="post" action="{% url 'registration_view' %}">
             {% csrf_token %}
             <div class="form-row">
               <div class="col-lg-9">
@@ -1426,20 +1426,20 @@
                 </div>
               </div>
             </div>
-            <div class="form-row">
+            {% comment %} <div class="form-row">
               <div class="col-lg-9 mt-sm-0 order-sm-0 order-1">
                 <div class="custom-control custom-checkbox mb-3">
                   <input class="custom-control-input" id="customControlValidation3" type="checkbox" name="subscribe"
                     required="" value="option3">
-                  <label class="custom-control-label fs-0 text-500 text-base" for="customControlValidation3">Yes, I
-                    would like to receive emails from the <a class="text-decoration-none" href="#">CloudKing
+                  <label class="custom-control-label fs-0  text-base text-light" for="customControlValidation3">Yes, I
+                    would like to receive emails from the <a class="text-decoration-none text-dark fs-1" href="#">CloudKing
                       Technical</a></label>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
             <div class="form-row">
               <div class="col-lg-9 pb-3">
-                <button class="btn btn-danger btn-lg" type="submit" name="submit" value="Send!">Submit</button>
+                <button class="btn btn-outline-light d-inline-flex align-items-center ml-2 fs-1" type="submit" name="submit" value="Send!">Submit</button>
               </div>
             </div>
             <div class="zform-feedback"></div>
