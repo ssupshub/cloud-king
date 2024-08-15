@@ -128,6 +128,33 @@ def contact_form_view(request):
     
     return render(request, 'contact.html')
 
+
+def contact_form_home_view(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        message = request.POST.get('message')
+
+        # Debugging prints
+        print(f"Name: {name}, Phone: {phone}, Email: {email}, Address: {address}, Message: {message}")
+
+        # Ensure all fields are received
+        if not all([name, phone, email, address, message]):
+            return HttpResponse("Missing fields", status=400)
+
+        try:
+            # Save the form data to the database
+            contact = ContactForm(name=name, phone=phone, email=email, address=address, message=message)
+            contact.save()
+            return redirect('success')
+        except Exception as e:
+            print(f"Error saving contact: {e}")
+            return HttpResponse("Error saving contact", status=500)
+    
+    return render(request, 'index.html')
+
 def success_page(request):
     return render(request, 'success.html')
 
