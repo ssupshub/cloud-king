@@ -56,7 +56,7 @@
       </div>
     </div>
     <!-- ============================================-->
-    <!-- End of Preloader ===========================--><a class="bottom-to-top rounded-soft" href="#top"
+    <!-- End of Preloader ===========================--><a class="bottom-to-top rounded-soft" href="{% url 'homePage' %}"
       data-fancyscroll><span class="fas fa-angle-up lg" data-fa-transform="down-2"></span></a>
 
 
@@ -66,8 +66,8 @@
         <a class="navbar-brand ml-3 ml-md-0" href="{% url 'homePage' %}">
 
           <div class="logo-container">
-            <h3 class="text-center gradient-bg">CKT</h3>
-            <div class="logos text-dark">Secure Career With Cloudking</div>
+            <h5 class="text-center gradient-bg pb-1">CloudKing Technical</h3>
+            <!-- <div class="logos text-dark">Secure Career With Cloudking</div>` -->
           </div>
         </a>
         <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -143,7 +143,7 @@
       {% endif %}
   </div>
 
-  <div class="container ">
+  <!-- <div class="container ">
     <form method="post" action="{% url 'my_form' %}" class="fixed-form ">
       {% csrf_token %}
       <div class="form-row">
@@ -162,7 +162,7 @@
           <button type="submit" class="btn btn-outline-light d-inline-flex align-items-center ml-2 fs-1">Submit</button>
       </div>
   </form>
-  </div>
+  </div> -->
 
   <div class="container">
     {% if messages %}
@@ -280,7 +280,7 @@
     </div>
     <div class="container-fluid">
       <h3 class="text-center mt-3" style="color: red;">Growth Path</h3>
-      <img class="rounded mt-4 img-fluid w-100 sec" style="height:80vh" src="{% static 'assets/images/b7.jpg' %}"
+      <img class="rounded mt-4 img-fluid w-100" style="height:80vh" src="{% static 'assets/images/b7.jpg' %}"
         alt=" " data-zanim-xs='{"from":{"opacity":0,"y":100},"to":{"opacity":1,"y":0},"duration":2}'
         data-zanim-trigger="scroll" />
     </div>
@@ -378,7 +378,7 @@
           <div class="col-lg-9 pl-lg-6 mt-5 mt-lg-0">
             <div class="row">
               <div class="col-12 col-md-5">
-                <img class="rounded-soft img-fluid" src="{% static 'assets/images/b1.jpg' %}" alt="thumb-image" />
+                <img class="rounded-soft img-fluid" src="{% static 'assets/images/banner1/d1.jfif' %}" alt="thumb-image" />
               </div>
               <div class="col pl-md-0 mt-1 mt-md-0">
                 <h5 class="text-uppercase text-base font-weight-extra-bold mb-0 mt-1 mt-lg-0"
@@ -1368,7 +1368,7 @@
   <!-- ===============================================-->
 
 
-  <footer class="footer-bg-color pb-5" >
+  <footer class="footer-bg-color" >
     <div class="container-fluid">
       <div class="row fs--1 no-gutters py-4 text-center ">
         <div class="col-md-6 col-sm-auto text-md-left pl-0">
