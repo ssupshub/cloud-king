@@ -1,4 +1,3 @@
-Sure! Here's a revised version of the README with a creative twist and without the "Getting Started" section:
 
 ---
 
@@ -49,4 +48,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-This version aims to inspire and energize the reader with creative language while focusing on the core strengths and offerings of CloudKing. Let me know if you’d like to adjust any part further!
